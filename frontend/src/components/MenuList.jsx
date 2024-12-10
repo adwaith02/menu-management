@@ -12,7 +12,7 @@ const MenuList = () => {
   useEffect(() => {
     const fetchMenus = async () => {
       try {
-        const response = await axios.get("https://menu-management-backend-xa4f.onrender.com/api/menus");
+        const response = await axios.get("https://menu-management-backend-xa4f.onrender.com/menus");
         console.log("Menus response:", response.data); // Check the structure of the response
         setMenus(response.data); // Set menus (categories)
       } catch (error) {
