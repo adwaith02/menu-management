@@ -31,7 +31,7 @@ const MenuList = () => {
         if (selectedMenu) {
           try {
             const response = await axios.get(
-              `https://menu-management-backend-xa4f.onrender.com/api/menus/${selectedMenu._id}/items`
+              `https://menu-management-backend-xa4f.onrender.com/menus/${selectedMenu._id}/items`
             );
             console.log("Fetched items:", response.data); // Check if items are fetched correctly
             setMenuItems(response.data); // Set menu items
