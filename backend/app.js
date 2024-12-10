@@ -7,8 +7,16 @@ const menuRoutes = require('./routes/menuRoutes');
 
 connectDB();
 
+// CORS configuration
+const corsOptions = {
+  origin: frontendUrl,
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+};
+
 const app = express();
-app.use(cors());
+// Use CORS with the specified options
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.use('/api', menuRoutes);
