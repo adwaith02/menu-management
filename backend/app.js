@@ -7,6 +7,8 @@ const menuRoutes = require('./routes/menuRoutes');
 
 connectDB();
 
+const frontendUrl = "https://menu-management-frontend.onrender.com";
+
 // CORS configuration
 const corsOptions = {
   origin: frontendUrl,
