@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://menu-management-backend-xa4f.onrender.com',
+  baseURL: 'https://menu-management-backend-xa4f.onrender.com/api',
 });
 
 export const getMenus = () => api.get('/menus');
